@@ -84,3 +84,9 @@ branch = true
 show_missing = true
 skip_covered = true
 exclude_lines = ["pragma: no cover", "if TYPE_CHECKING:", "raise NotImplementedError"]
+
+[tool.uv]
+# Supply-chain guard: never resolve a release younger than three days. It lives
+# here, not only in a personal uv.toml, so the lockfile means the same thing on
+# every machine and in CI.
+exclude-newer = "3 days"
