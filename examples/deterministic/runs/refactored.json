@@ -1,0 +1,1521 @@
+{
+  "info": {
+    "suite": "ticket-router",
+    "system": "python:router:refactored_route",
+    "dataset_path": "cases.jsonl",
+    "dataset_hash": "bc97ea936a7d2a2a",
+    "started_at": "2026-10-13T03:25:52+00:00",
+    "finished_at": "2026-10-13T03:25:52+00:00",
+    "wall_time_s": 0.001,
+    "evalproof_version": "0.1.0",
+    "seed": 0,
+    "environment": {
+      "python": "3.13.15",
+      "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+      "machine": "arm64",
+      "processor": "arm"
+    }
+  },
+  "results": [
+    {
+      "case_id": "t01",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0050000089686363935,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t02",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.003207998815923929,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t03",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0018329883459955454,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t04",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0014160177670419216,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t05",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0012910168152302504,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t06",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0007920025382190943,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t07",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0007920025382190943,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t08",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.00100000761449337,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t09",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0012080126907676458,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t10",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0007920025382190943,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t11",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0009590003173798323,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t12",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0008749775588512421,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t13",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0011250085663050413,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t14",
+      "tags": [
+        "billing"
+      ],
+      "output": {
+        "output": "billing",
+        "retrieved": [],
+        "latency_ms": 0.0012499804142862558,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t15",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.0019580184016376734,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t16",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.002208020305261016,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t17",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.002415996277704835,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t18",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.0022920139599591494,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t19",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.00204198295250535,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t20",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.0017499842215329409,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t21",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.001500011421740055,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t22",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.002167013008147478,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t23",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.004290981451049447,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t24",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.00191599247045815,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t25",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.002040993422269821,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t26",
+      "tags": [
+        "account"
+      ],
+      "output": {
+        "output": "account",
+        "retrieved": [],
+        "latency_ms": 0.0014169781934469938,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t27",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.0025840126909315586,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t28",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.0023329921532422304,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t29",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.0031669915188103914,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t30",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.0029999937396496534,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t31",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.002749991836026311,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t32",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.0024999899324029684,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t33",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.0026249908842146397,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t34",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.0024170149117708206,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t35",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.004417001036927104,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 0.0,
+          "passed": false,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t36",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.0038329744711518288,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 0.0,
+          "passed": false,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t37",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.0037080026231706142,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 0.0,
+          "passed": false,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t38",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.003749999450519681,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 0.0,
+          "passed": false,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t39",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.0026249908842146397,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t40",
+      "tags": [
+        "technical"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.0036249984987080097,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 0.0,
+          "passed": false,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t41",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.00300002284348011,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t42",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.0035409757401794195,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t43",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.0038750004023313522,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t44",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.0036249984987080097,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t45",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.0032919924706220627,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t46",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.19616700592450798,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t47",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.0038750004023313522,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t48",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.003375025698915124,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 0.0,
+          "passed": false,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t49",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.0034580007195472717,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t50",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "technical",
+        "retrieved": [],
+        "latency_ms": 0.002375018084421754,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 0.0,
+          "passed": false,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t51",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.0031669915188103914,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t52",
+      "tags": [
+        "shipping"
+      ],
+      "output": {
+        "output": "shipping",
+        "retrieved": [],
+        "latency_ms": 0.00304199056699872,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t53",
+      "tags": [
+        "other"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.003249995643272996,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t54",
+      "tags": [
+        "other"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.003374996595084667,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t55",
+      "tags": [
+        "other"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.003249995643272996,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t56",
+      "tags": [
+        "other"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.003708992153406143,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t57",
+      "tags": [
+        "other"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.0033329997677356005,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t58",
+      "tags": [
+        "other"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.0031660019885748625,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t59",
+      "tags": [
+        "other"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.0032910029403865337,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "t60",
+      "tags": [
+        "other"
+      ],
+      "output": {
+        "output": "other",
+        "retrieved": [],
+        "latency_ms": 0.0029579969123005867,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "cost_usd": 0.0,
+        "cached": false,
+        "error": null
+      },
+      "scores": {
+        "queue": {
+          "value": 1.0,
+          "passed": true,
+          "reason": null,
+          "judge_tokens": 0,
+          "judge_cost_usd": 0.0
+        }
+      }
+    }
+  ]
+}

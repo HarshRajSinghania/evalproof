@@ -1,0 +1,60 @@
+{"id": "t01", "input": "I was charged twice for my March subscription.", "reference": "billing", "tags": ["billing"]}
+{"id": "t02", "input": "Please refund the order I cancelled yesterday.", "reference": "billing", "tags": ["billing"]}
+{"id": "t03", "input": "Where can I download last month's invoice?", "reference": "billing", "tags": ["billing"]}
+{"id": "t04", "input": "My card was declined but the payment still shows as pending.", "reference": "billing", "tags": ["billing"]}
+{"id": "t05", "input": "Why did the price of the Pro plan go up?", "reference": "billing", "tags": ["billing"]}
+{"id": "t06", "input": "Can I get a refund for the unused months?", "reference": "billing", "tags": ["billing"]}
+{"id": "t07", "input": "The invoice has the wrong company name on it.", "reference": "billing", "tags": ["billing"]}
+{"id": "t08", "input": "I see a charge I don't recognise on my statement.", "reference": "billing", "tags": ["billing"]}
+{"id": "t09", "input": "How do I switch my subscription to annual billing?", "reference": "billing", "tags": ["billing"]}
+{"id": "t10", "input": "Refund still not received after two weeks.", "reference": "billing", "tags": ["billing"]}
+{"id": "t11", "input": "Do you accept payment by bank transfer?", "reference": "billing", "tags": ["billing"]}
+{"id": "t12", "input": "I was charged after I cancelled my trial.", "reference": "billing", "tags": ["billing"]}
+{"id": "t13", "input": "Update the card on file for my account please.", "reference": "billing", "tags": ["billing"]}
+{"id": "t14", "input": "Is VAT included in the price shown at checkout?", "reference": "billing", "tags": ["billing"]}
+{"id": "t15", "input": "I forgot my password and the reset email never arrives.", "reference": "account", "tags": ["account"]}
+{"id": "t16", "input": "How do I enable two-factor authentication?", "reference": "account", "tags": ["account"]}
+{"id": "t17", "input": "Please delete my account and all my data.", "reference": "account", "tags": ["account"]}
+{"id": "t18", "input": "I want to change the email address on my profile.", "reference": "account", "tags": ["account"]}
+{"id": "t19", "input": "Can I change my username?", "reference": "account", "tags": ["account"]}
+{"id": "t20", "input": "I can't log in after updating the app.", "reference": "account", "tags": ["account"]}
+{"id": "t21", "input": "My login keeps saying invalid password.", "reference": "account", "tags": ["account"]}
+{"id": "t22", "input": "How do I merge two accounts?", "reference": "account", "tags": ["account"]}
+{"id": "t23", "input": "Someone else is using my account, I think it was hacked.", "reference": "account", "tags": ["account"]}
+{"id": "t24", "input": "2FA codes from the authenticator app are rejected.", "reference": "account", "tags": ["account"]}
+{"id": "t25", "input": "How do I export my account data?", "reference": "account", "tags": ["account"]}
+{"id": "t26", "input": "The reset password link has expired.", "reference": "account", "tags": ["account"]}
+{"id": "t27", "input": "The app crashes when I open the camera.", "reference": "technical", "tags": ["technical"]}
+{"id": "t28", "input": "Error 500 when saving a note.", "reference": "technical", "tags": ["technical"]}
+{"id": "t29", "input": "Sync between my phone and laptop is broken.", "reference": "technical", "tags": ["technical"]}
+{"id": "t30", "input": "The dashboard is very slow since the last update.", "reference": "technical", "tags": ["technical"]}
+{"id": "t31", "input": "Notes are not loading on Android.", "reference": "technical", "tags": ["technical"]}
+{"id": "t32", "input": "Found a bug: dark mode text is invisible.", "reference": "technical", "tags": ["technical"]}
+{"id": "t33", "input": "The app freezes on the splash screen.", "reference": "technical", "tags": ["technical"]}
+{"id": "t34", "input": "Attachments fail with an upload error.", "reference": "technical", "tags": ["technical"]}
+{"id": "t35", "input": "Search returns no results even for exact titles.", "reference": "technical", "tags": ["technical"]}
+{"id": "t36", "input": "Widgets stopped refreshing on iOS.", "reference": "technical", "tags": ["technical"]}
+{"id": "t37", "input": "The desktop app shows a blank white window.", "reference": "technical", "tags": ["technical"]}
+{"id": "t38", "input": "Keyboard shortcuts don't work in the editor.", "reference": "technical", "tags": ["technical"]}
+{"id": "t39", "input": "Crash report attached, it happens every time I export.", "reference": "technical", "tags": ["technical"]}
+{"id": "t40", "input": "Push notifications arrive hours late.", "reference": "technical", "tags": ["technical"]}
+{"id": "t41", "input": "My package hasn't arrived yet.", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t42", "input": "The tracking number shows no updates for five days.", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t43", "input": "The courier left the parcel at the wrong address.", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t44", "input": "Can I change the delivery address after ordering?", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t45", "input": "The notebook arrived damaged.", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t46", "input": "When will my order be shipped?", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t47", "input": "Delivery was marked complete but I have nothing.", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t48", "input": "Do you ship to Iceland?", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t49", "input": "The parcel is stuck in customs.", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t50", "input": "The tracking link gives an error.", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t51", "input": "Can I pick a delivery time slot?", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t52", "input": "My package was left with a neighbour.", "reference": "shipping", "tags": ["shipping"]}
+{"id": "t53", "input": "Do you have a student discount?", "reference": "other", "tags": ["other"]}
+{"id": "t54", "input": "Are you hiring designers?", "reference": "other", "tags": ["other"]}
+{"id": "t55", "input": "I love the new update, thank you!", "reference": "other", "tags": ["other"]}
+{"id": "t56", "input": "Can I suggest a feature for shared folders?", "reference": "other", "tags": ["other"]}
+{"id": "t57", "input": "Is there a printed user manual?", "reference": "other", "tags": ["other"]}
+{"id": "t58", "input": "What are your office hours?", "reference": "other", "tags": ["other"]}
+{"id": "t59", "input": "Do you have a partnership program?", "reference": "other", "tags": ["other"]}
+{"id": "t60", "input": "Can I use the app offline?", "reference": "other", "tags": ["other"]}

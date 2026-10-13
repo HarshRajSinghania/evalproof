@@ -1,0 +1,14 @@
+# Offline example: no model, no network. Runs in CI on every commit.
+name: ticket-router
+dataset: cases.jsonl
+system:
+  target: python:router:baseline_route
+scorers:
+  - name: queue
+    type: exact_match
+gate:
+  metric: queue
+  max_drop: 0.02   # tolerate up to two points of noise...
+  alpha: 0.05      # ...and fail only if a bigger drop is also unlikely to be chance
+  min_cases: 30
+cache_dir: .evalproof/cache
