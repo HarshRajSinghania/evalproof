@@ -1,0 +1,151 @@
+# Measurements
+
+Every figure here comes from real runs of [`examples/support-qa`](examples/support-qa) on
+one machine. The run files are committed in `examples/support-qa/runs/`, and
+`uv run python examples/support-qa/measure.py` recomputes the calibration, comparison and
+latency tables from them without a model.
+
+## Setup
+
+| | |
+|---|---|
+| Machine | Apple M5, 24 GB RAM, macOS 27.0.1 (arm64) |
+| Ollama | 0.23.2 |
+| System under test | `qwen3:1.7b`, digest `8f68893c685c` — temperature 0, seed 0, `think: false`, max 200 tokens |
+| Judge | `qwen3:8b`, digest `500a1f067a9f` — temperature 0, seed 0, `think: false`, max 256 tokens |
+| evalproof / Python | 0.1.0 / 3.13.15 |
+| Golden set | 83 questions about a fictional product, dataset hash `c6f08ac201023363`; 9 are not answerable from the facts |
+| "Gold" | a per-question regex answer key, written before any model output was seen and not changed after. It stands in for human review; it is not human labelling. |
+| Change under test | grounded system prompt → "friendly, always give a complete answer" prompt; same model |
+
+## 1. The two runs
+
+| | Baseline (grounded prompt) | Candidate (friendly prompt) |
+|---|---:|---:|
+| Answer-key pass rate | 81.9% [72.3, 88.7] | 75.9% [65.7, 83.8] |
+| Judge pass rate | 77.1% [67.0, 84.8] | 72.3% [61.8, 80.8] |
+| System latency p50 / p95 | 624 / 1,469 ms | 2,243 / 4,422 ms |
+| Mean output length | 19 tokens | 77 tokens |
+| Run wall time (system + judge, sequential) | 363 s | 588 s |
+| Re-run with a warm cache | 0.05 s, results identical to the cold run | — |
+
+Intervals are 95% Wilson. Wall times are for 83 cases with one system call and one judge
+call each, no concurrency.
+
+## 2. How good is the judge? Measured against the full answer key
+
+| | Baseline | Candidate |
+|---|---:|---:|
+| Judge pass · key pass (TP) | 63 | 58 |
+| Judge pass · key fail (FP) | 1 | 2 |
+| Judge fail · key pass (FN) | 5 | 5 |
+| Judge fail · key fail (TN) | 14 | 18 |
+| TPR / FPR | 92.6% / 6.7% | 92.1% / 10.0% |
+| Cohen's κ | 0.779 | 0.781 |
+
+## 3. Correcting the judge's rate from a 30-case gold sample
+
+A team will not hand-label all 83 cases every release. The suite calibrates against a
+random 30. Over 200 different random samples of 30 (seeds 0–199), against the answer key on
+all 83 as the truth:
+
+| Baseline (truth 81.9%) | Mean point | Mean \|error\| | 95% CI covers truth | Mean CI width |
+|---|---:|---:|---:|---:|
+| Raw judge rate (all 83) | 77.1% | 4.8 pts | 100% | 17.8 pts |
+| Gold sample alone (30) | 82.8% | 4.1 pts | 100% | 26.2 pts |
+| ACC (judge on 83, error rates from 30) | 81.5% | 3.8 pts | 100% | 34.1 pts |
+| PPI (judge on 53, residuals from 30) | 81.2% | 4.7 pts | 98.5% | 28.6 pts |
+
+| Candidate (truth 75.9%) | Mean point | Mean \|error\| | 95% CI covers truth | Mean CI width |
+|---|---:|---:|---:|---:|
+| Raw judge rate | 72.3% | 3.6 pts | 100% | 18.9 pts |
+| Gold sample alone | 76.1% | 4.3 pts | 99.0% | 29.1 pts |
+| ACC | 75.3% | 4.0 pts | 100% | 41.0 pts |
+| PPI | 75.4% | 4.7 pts | 98.5% | 31.6 pts |
+
+**What this shows.** The raw judge rate sits 3.6–4.8 points below the key, and both
+corrections remove that offset on average. At this size it buys little: the offset is
+smaller than the raw rate's own interval, which covered the truth every time, while the
+corrected intervals are about twice as wide. Calibration earns its keep when the suite is
+large enough that the raw interval is narrow and the bias dominates — the regime the
+[prevalence-shift](https://github.com/technobasant/prevalence-shift) simulation shows,
+where the raw interval covered the truth 0% of the time at 5,000 reports per period — or
+when the judge is worse than this one.
+
+## 4. The gold was wrong more often than the judge
+
+The judge and the answer key disagreed on 13 cases across the two runs. Each was read by
+hand:
+
+| Case | Run | Key | Judge | Who was right | Why |
+|---|---|---|---|---|---|
+| q76 lifetime licence | both | pass | fail | **judge** | the answer invents "no lifetime licence"; the key's abstention regex matched "not … provide" |
+| q78 HIPAA | both | pass | fail | **judge** | the answer asserts "not HIPAA compliant"; the key matched "does not mention" |
+| q77 uptime SLA | baseline | pass | fail | **judge** | the answer invents 99.9% and 99.99% SLAs; the key matched "no SLA … specified" |
+| q28 which plans have trials | candidate | pass | fail | **judge** | the answer adds a trial to the Free plan; the key only checked that Plus and Team appear |
+| q31 cancelling monthly | candidate | pass | fail | **judge** | the answer says service stops immediately; the key matched "until the end" in a later bullet |
+| q56 two-factor methods | baseline | pass | fail | **key** | correct answer plus a true extra fact (no SMS); the judge penalised the extra fact |
+| q65 integrations | baseline | pass | fail | **key** | correct answer plus a true extra fact; same failure |
+| q32 payment methods | candidate | pass | fail | **key** | correct answer plus a true extra fact; same failure |
+| q05 Enterprise pricing | candidate | fail | pass | **key** | the answer quotes Team's prices for Enterprise; the judge saw "custom pricing" in a bullet and passed it |
+| q66 Microsoft Teams | both | fail | pass | ambiguous | "Yes, Quillfox offers an integration…" then "Microsoft Teams is not supported" |
+
+**The key was wrong 7 times, the judge 4 times, 2 are ambiguous.** The key's errors are
+structural: a regex can tell that the right fact is present but not that a wrong one is
+absent, and it cannot tell an abstention from an invention phrased as one. Correcting the
+key on these cases puts the baseline at 78.3% and the candidate at 71.1% — within about a
+point of the raw judge. Most of the "bias" that section 3 corrected was the gold's, not the
+judge's. Calibration is only as good as its labels, and the labels need the same
+scrutiny as the judge. The judge's own failure is consistent too: three of its four
+errors penalise correct extra detail the rubric explicitly allows.
+
+## 5. Did the prompt change regress?
+
+`evalproof compare … --gate` on the 83 paired cases:
+
+| Metric | Baseline | Candidate | Δ (95% CI) | Test | p |
+|---|---:|---:|---:|---|---:|
+| answer_key | 81.9% | 75.9% | −6.0 pts [−14.5, +1.2] | exact McNemar | 0.227 |
+| **judge** (gated) | 77.1% | 72.3% | −4.8 pts [−13.3, +3.6] | exact McNemar | 0.388 |
+
+The judge saw 8 cases get worse and 4 get better. **Gate: pass with a warning (exit 0)** —
+the drop is beyond the 3-point tolerance but p = 0.39 at n = 83, so the data cannot tell
+it from noise. A delta-only gate would have failed the change on the same numbers.
+
+The regression that *is* measurable is latency: p95 went from 1,469 ms to 4,422 ms. With
+`--max-p95-ms 2500` the same command fails with **exit 3** (budget breach) and still
+prints the quality warning.
+
+## 6. Pairwise judging: position and length bias
+
+`evalproof pairwise` asked the judge to pick the better answer for each of the 83 pairs,
+in both orders (166 calls, 776 s):
+
+* **35 of 83 verdicts (42.2%) flipped when the order was swapped.** In 32 of those the
+  answer shown first won both times. evalproof reports them as ties.
+* Of the 48 consistent verdicts, the judge preferred the candidate 42 times and the
+  baseline 6 — although the pointwise judge and the answer key both rate the candidate
+  lower. In 31 of the 42, both answers were correct by the key; on those cases the
+  candidate's answers averaged 383 characters against the baseline's 78. In 9, the
+  candidate's answer was wrong by the key.
+
+An 8B pairwise judge without the order swap would have reported a decisive win for the
+worse prompt. Position bias is cancelled by the swap; length bias is not, and is why
+evalproof gates on pointwise verdicts and reports pairwise preference as a diagnostic.
+
+## 7. Determinism and the cache
+
+* 20 cases re-run with the cache disabled: **20/20 identical system outputs, 20/20
+  identical verdicts, 20/20 identical judge reasons** (temperature 0, seed 0, Ollama 0.23.2).
+* Re-running the full baseline with a warm cache took 0.05 s instead of 363 s and produced
+  results identical to the cold run, apart from the per-case `cached` flag.
+
+## Limits
+
+* One machine, one pair of small local models, one fictional domain, 83 cases. The numbers
+  describe this setup; the method is what transfers.
+* The answer key is a stand-in for human review, and section 4 shows it is wrong in
+  predictable ways. A real deployment should calibrate against human labels.
+* Ollama's determinism with a fixed seed was checked on 20 cases on this backend only.
+* The judge ran with thinking disabled. A reasoning judge may be more accurate and slower;
+  that was not measured here.

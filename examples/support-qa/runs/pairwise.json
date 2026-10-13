@@ -1,0 +1,583 @@
+[
+  {
+    "id": "q01",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q02",
+    "winner": "tie",
+    "consistent": false,
+    "first": "tie",
+    "second": "b"
+  },
+  {
+    "id": "q03",
+    "winner": "tie",
+    "consistent": false,
+    "first": "b",
+    "second": "a"
+  },
+  {
+    "id": "q04",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q05",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q06",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q07",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q08",
+    "winner": "a",
+    "consistent": true,
+    "first": "a",
+    "second": "a"
+  },
+  {
+    "id": "q09",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q10",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q11",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q12",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q13",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q14",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q15",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q16",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q17",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q18",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q19",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q20",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q21",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q22",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q23",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q24",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q25",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q26",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q27",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q28",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q29",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q30",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q31",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q32",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q33",
+    "winner": "a",
+    "consistent": true,
+    "first": "a",
+    "second": "a"
+  },
+  {
+    "id": "q34",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q35",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q36",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q37",
+    "winner": "tie",
+    "consistent": false,
+    "first": "b",
+    "second": "a"
+  },
+  {
+    "id": "q38",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q39",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q40",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q41",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q42",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q43",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q44",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q45",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q46",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q47",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q48",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q49",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q50",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q51",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q52",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q53",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q54",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q55",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q56",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q57",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q58",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q59",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q60",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q61",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q62",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q63",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q64",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q65",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q66",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q67",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q68",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q69",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q70",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q71",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q72",
+    "winner": "a",
+    "consistent": true,
+    "first": "a",
+    "second": "a"
+  },
+  {
+    "id": "q73",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q74",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q75",
+    "winner": "tie",
+    "consistent": false,
+    "first": "a",
+    "second": "b"
+  },
+  {
+    "id": "q76",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q77",
+    "winner": "a",
+    "consistent": true,
+    "first": "a",
+    "second": "a"
+  },
+  {
+    "id": "q78",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q79",
+    "winner": "a",
+    "consistent": true,
+    "first": "a",
+    "second": "a"
+  },
+  {
+    "id": "q80",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q81",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q82",
+    "winner": "b",
+    "consistent": true,
+    "first": "b",
+    "second": "b"
+  },
+  {
+    "id": "q83",
+    "winner": "a",
+    "consistent": true,
+    "first": "a",
+    "second": "a"
+  }
+]
