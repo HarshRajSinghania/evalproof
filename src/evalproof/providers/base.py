@@ -1,0 +1,75 @@
+"""The one thing evalproof needs from a model: send messages, get text and token counts back."""
+
+from __future__ import annotations
+
+import random
+import time
+from collections.abc import Callable
+from typing import Protocol, TypeVar
+
+import httpx
+from pydantic import BaseModel
+
+from evalproof.config import GenerationParams
+
+T = TypeVar("T")
+
+RETRY_STATUS = {408, 409, 425, 429, 500, 502, 503, 504, 529}
+
+
+class ProviderError(RuntimeError):
+    pass
+
+
+class Message(BaseModel):
+    role: str  # "system" | "user" | "assistant"
+    content: str
+
+
+class ChatResponse(BaseModel):
+    text: str
+    model: str
+    tokens_in: int = 0
+    tokens_out: int = 0
+    latency_ms: float = 0.0
+    cached: bool = False
+
+
+class Provider(Protocol):
+    name: str
+    model: str
+
+    def chat(self, messages: list[Message], params: GenerationParams) -> ChatResponse: ...
+
+
+def with_retries(
+    fn: Callable[[], T],
+    *,
+    attempts: int = 4,
+    base_delay: float = 0.5,
+    sleep: Callable[[float], None] = time.sleep,
+    rng: random.Random | None = None,
+) -> T:
+    """Retry transport errors and retryable HTTP statuses with jittered exponential backoff."""
+    rng = rng or random.Random(0)
+    last: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            return fn()
+        except httpx.HTTPStatusError as exc:
+            if exc.response.status_code not in RETRY_STATUS:
+                raise ProviderError(
+                    f"HTTP {exc.response.status_code}: {exc.response.text[:300]}"
+                ) from exc
+            last = exc
+        except httpx.TransportError as exc:
+            last = exc
+        if attempt < attempts - 1:
+            sleep(base_delay * (2**attempt) * (0.5 + rng.random()))
+    raise ProviderError(f"giving up after {attempts} attempts: {last}") from last
+
+
+def split_system(messages: list[Message]) -> tuple[str | None, list[Message]]:
+    """Providers that take the system prompt as a separate field need it pulled out."""
+    system = "\n\n".join(m.content for m in messages if m.role == "system") or None
+    return system, [m for m in messages if m.role != "system"]
