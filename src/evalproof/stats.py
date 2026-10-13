@@ -34,7 +34,12 @@ def wilson(k: int, n: int, alpha: float = 0.05) -> tuple[float, float]:
     denom = 1 + z * z / n
     centre = (p + z * z / (2 * n)) / denom
     half = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / denom
-    return (max(0.0, centre - half), min(1.0, centre + half))
+    # At k=0 the lower bound is exactly 0 (centre == half), and at k=n the upper
+    # bound is exactly 1. Computing them by subtraction leaves platform-dependent
+    # rounding (2.8e-17 on x86_64 Linux, 0.0 on arm64 macOS), so pin them.
+    lo = 0.0 if k == 0 else max(0.0, centre - half)
+    hi = 1.0 if k == n else min(1.0, centre + half)
+    return (lo, hi)
 
 
 def bootstrap_ci(

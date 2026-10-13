@@ -108,3 +108,10 @@ def test_percentile() -> None:
     assert percentile([], 95) == 0.0
     assert percentile([1.0, 2.0, 3.0, 4.0, 5.0], 50) == 3.0
     assert math.isclose(percentile([0.0, 100.0], 95), 95.0)
+
+
+def test_wilson_all_of_ten_is_exactly_one() -> None:
+    # Mirror of 0/10: the upper bound is exactly 1, not 1 - rounding error.
+    lo, hi = wilson(10, 10)
+    assert hi == 1.0
+    assert lo == pytest.approx(1 - 0.27753, abs=1e-4)
