@@ -1,0 +1,74 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: uv run ruff format --check .
+      - run: uv run ruff check .
+      - run: uv run mypy src
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: uv sync --locked
+      - run: uv run pytest --cov --cov-report=term-missing --cov-fail-under=85
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - run: uv build
+      - name: wheel installs and runs
+        run: |
+          uv venv /tmp/wheel-check
+          uv pip install --python /tmp/wheel-check dist/*.whl
+          /tmp/wheel-check/bin/evalproof --version
+
+  # The gate has to fail when it should and pass when it should. No model needed:
+  # the offline example is a keyword router with known regressions.
+  gate-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - name: run the four routers
+        run: |
+          for v in baseline regressed noisy refactored; do
+            uv run evalproof run examples/deterministic/suite.yaml \
+              --system "python:router:${v}_route" --out "/tmp/$v.json" --quiet > /dev/null
+          done
+      - name: assert exit codes
+        run: |
+          set +e
+          check() {
+            uv run evalproof compare /tmp/baseline.json "/tmp/$1.json" \
+              --suite examples/deterministic/suite.yaml --gate --markdown "$GITHUB_STEP_SUMMARY" > /dev/null
+            got=$?
+            if [ "$got" != "$2" ]; then echo "::error::$1: expected exit $2, got $got"; exit 1; fi
+            echo "$1 → exit $got (expected $2)"
+          }
+          check regressed 1
+          check noisy 0
+          check refactored 0

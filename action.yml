@@ -1,0 +1,63 @@
+name: evalproof gate
+description: >-
+  Compare a candidate evaluation run against a baseline on paired cases, write the report
+  to the job summary, and fail the job only on a regression that is both large enough to
+  matter and statistically significant.
+branding:
+  icon: check-circle
+  color: green
+
+inputs:
+  baseline:
+    description: Path to the baseline run JSON (e.g. produced on the main branch).
+    required: true
+  candidate:
+    description: Path to the candidate run JSON (produced on this branch).
+    required: true
+  suite:
+    description: Suite YAML whose `gate` block sets the metric and thresholds.
+    required: false
+    default: ""
+  metric:
+    description: Scorer to gate on, if not taken from the suite.
+    required: false
+    default: ""
+  max-drop:
+    description: Largest tolerated drop, as a fraction (0.02 = two points).
+    required: false
+    default: ""
+  alpha:
+    description: Significance level.
+    required: false
+    default: ""
+
+outputs:
+  exit-code:
+    description: "0 pass, 1 regression, 3 budget breach, 4 cannot gate, 2 usage error."
+    value: ${{ steps.gate.outputs.exit-code }}
+
+runs:
+  using: composite
+  steps:
+    - uses: astral-sh/setup-uv@v6
+    - id: gate
+      shell: bash
+      env:
+        EP_BASELINE: ${{ inputs.baseline }}
+        EP_CANDIDATE: ${{ inputs.candidate }}
+        EP_SUITE: ${{ inputs.suite }}
+        EP_METRIC: ${{ inputs.metric }}
+        EP_MAX_DROP: ${{ inputs.max-drop }}
+        EP_ALPHA: ${{ inputs.alpha }}
+        EP_SOURCE: ${{ github.action_path }}
+      run: |
+        args=(compare "$EP_BASELINE" "$EP_CANDIDATE" --gate --markdown "$GITHUB_STEP_SUMMARY")
+        [ -n "$EP_SUITE" ] && args+=(--suite "$EP_SUITE")
+        [ -n "$EP_METRIC" ] && args+=(--metric "$EP_METRIC")
+        [ -n "$EP_MAX_DROP" ] && args+=(--max-drop "$EP_MAX_DROP")
+        [ -n "$EP_ALPHA" ] && args+=(--alpha "$EP_ALPHA")
+        set +e
+        uvx --from "$EP_SOURCE" evalproof "${args[@]}"
+        code=$?
+        echo "exit-code=$code" >> "$GITHUB_OUTPUT"
+        exit $code
