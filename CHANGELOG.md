@@ -2,6 +2,20 @@
 
 All notable changes are listed here. The project follows [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] — 2026-10-13
+
+### Fixed
+
+- The Wilson interval now returns exactly 0 at k=0 and exactly 1 at k=n. Computing
+  the boundaries by subtraction left platform-dependent rounding (2.8e-17 on x86_64
+  Linux, 0.0 on arm64 macOS).
+
+### Changed
+
+- The three-day `exclude-newer` resolution guard is declared in `[tool.uv]`, so
+  `uv.lock` means the same thing on every machine and in CI.
+- CI pins uv to the version that wrote `uv.lock`.
+
 ## [0.1.0] — 2026-10-13
 
 First release.

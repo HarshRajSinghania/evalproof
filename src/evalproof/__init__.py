@@ -6,4 +6,4 @@ confidence intervals, compares runs on paired cases, and gates CI on
 statistically meaningful regressions rather than on noise.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
